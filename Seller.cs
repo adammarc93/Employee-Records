@@ -31,7 +31,7 @@ namespace Employee_Records
 
         protected override string LastColumnHeading()
         {
-            return String.Format(";{0}", "Obrót");
+            return String.Format(";{0}", "Turnover");
         }
 
         public override string ToString()
