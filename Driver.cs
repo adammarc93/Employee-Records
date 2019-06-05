@@ -11,10 +11,15 @@ namespace Employee_Records
         double kilometersAmount;
         static readonly double averageMonthKilometersAmount = 8000;
 
-        public Driver(string _name, string _lastName, double _workingHoursAmount, double _hourlyRate, double _kilometersAmount):
+        public Driver(string _name, string _lastName, double _workingHoursAmount, double _hourlyRate, double _kilometersAmount) :
             base(_name, _lastName, _workingHoursAmount, _hourlyRate)
         {
             kilometersAmount = _kilometersAmount;
+        }
+
+        public Driver(string[] tab) : base(tab[0], tab[1], double.Parse(tab[2]), double.Parse(tab[3]))
+        {
+            kilometersAmount = double.Parse(tab[4]);
         }
 
         protected override double CountBonus()
@@ -36,7 +41,7 @@ namespace Employee_Records
 
         public override string ToString()
         {
-            return base.ToString() + String.Format("{0,10}", kilometersAmount);
+            return base.ToString() + String.Format("{0,-10}", kilometersAmount);
         }
 
         public override string TextToFile()

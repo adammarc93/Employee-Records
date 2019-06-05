@@ -8,10 +8,10 @@ namespace Employee_Records
 {
     static class Menu
     {
-        static string pathSellerData = @"..\..\data\SellerData";
-        static string pathDriverData = @"..\..\data\DriverData";
-        static string pathSellerResultData = @"..\..\data\SellerResultData";
-        static string pathDriverResultData = @"..\..\data\DriverResultData";
+        static string pathSellerData = @"..\..\data\SellerData.txt";
+        static string pathDriverData = @"..\..\data\DriverData.txt";
+        static string pathSellerResultData = @"..\..\data\SellerResultData.txt";
+        static string pathDriverResultData = @"..\..\data\DriverResultData.txt";
 
         public static void StartMenu()
         {
@@ -47,8 +47,8 @@ namespace Employee_Records
                         ReadDrivers();
                         break;
                     case ConsoleKey.D2:
-                        ReadSellers();
                         Console.Clear();
+                        ReadSellers();
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.Escape:
@@ -62,12 +62,18 @@ namespace Employee_Records
 
         static void ReadDrivers()
         {
+            WorkersList drivers = new WorkersList(Department.driver);
 
+            drivers.Read(pathDriverData);
+            drivers.ShowList();
         }
 
         static void ReadSellers()
         {
+            WorkersList sellers = new WorkersList(Department.seller);
 
+            sellers.Read(pathSellerData);
+            sellers.ShowList();
         }
     }
 }

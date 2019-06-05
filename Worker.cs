@@ -43,7 +43,7 @@ namespace Employee_Records
 
         public override string ToString()
         {
-            return String.Format("{0,-10}{1,-10}{2,8:F2}{3,8:F2}{4,12:F2}{5,8:F2}",
+            return String.Format("{0,-10}{1,-10}{2,-10:F2}{3,-12:F2}{4,-10:F2}{5,-10:F2}",
                 name, lastName, workingHoursAmount, hourlyRate, CountBasic(), CountBonus());
         }
 
@@ -51,6 +51,14 @@ namespace Employee_Records
         {
             return String.Format("{0};{1};{2};{3};{4};{5}",
                 name, lastName, workingHoursAmount, hourlyRate, CountBasic(), CountBonus());
+        }
+
+        public static string ColumnsHeading(Department department)
+        {
+            string lastColumn = (department == Department.driver) ? "Kilometers" : "Turnover";
+
+            return String.Format("{0,-10}{1,-10}{2,-10}{3,-12}{4,-10}{5,-10}{6,-10}",
+              "Name", "Last name", "Hours", "Hourly rate", "Basic", "Bonus", lastColumn);
         }
     }
 }

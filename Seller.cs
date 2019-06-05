@@ -17,6 +17,11 @@ namespace Employee_Records
             turnoverValue = _turnover;
         }
 
+        public Seller(string[] tab): base(tab[0], tab[1], double.Parse(tab[2]), double.Parse(tab[3]))
+        {
+            turnoverValue = double.Parse(tab[4]);
+        }
+
         protected override double CountBonus()
         {
             double bonusPercent = 0.3;
@@ -36,7 +41,7 @@ namespace Employee_Records
 
         public override string ToString()
         {
-            return base.ToString() + String.Format("{0,10}", turnoverValue);
+            return base.ToString() + String.Format("{0,-10}", turnoverValue);
         }
 
         public override string TextToFile()
