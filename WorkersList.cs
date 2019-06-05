@@ -81,6 +81,34 @@ namespace Employee_Records
             }
         }
 
+        public void Save(string path)
+        {
+            StreamWriter sw = null;
+            FileStream fs = null;
+
+            try
+            {
+                fs = File.Create(path);
+                sw = new StreamWriter(fs);
+                foreach (var worker in personsList)
+                {
+                    sw.WriteLine(worker.TextToFile());
+                }
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            if (sw != null)
+            {
+                sw.Close();
+            }
+        }
+
         private bool CorrectData(string[] tab)
         {
             bool correctData = false;

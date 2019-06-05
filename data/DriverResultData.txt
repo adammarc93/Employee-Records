@@ -1,0 +1,6 @@
+Jan;Dym;100;10;1000;100;5000
+Dariusz;Kowalski;160;15;2400;240;6500
+Tomasz;Kowalski;100;10;1000;200;10000
+Adam;Nycz;100;10;1000;100;6000
+Borys;Szumowski;178;18;3204;640,8;12000
+Tadeusz;Znyk;120;18;2160;216;4670

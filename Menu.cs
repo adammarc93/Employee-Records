@@ -65,7 +65,10 @@ namespace Employee_Records
             WorkersList drivers = new WorkersList(Department.driver);
 
             drivers.Read(pathDriverData);
-            drivers.ShowList();
+            if (drivers.ShowList())
+            {
+                drivers.Save(pathDriverResultData);
+            }
         }
 
         static void ReadSellers()
@@ -73,7 +76,10 @@ namespace Employee_Records
             WorkersList sellers = new WorkersList(Department.seller);
 
             sellers.Read(pathSellerData);
-            sellers.ShowList();
+            if (sellers.ShowList())
+            {
+                sellers.Save(pathSellerResultData);
+            }
         }
     }
 }
