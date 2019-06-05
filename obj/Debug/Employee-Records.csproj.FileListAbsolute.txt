@@ -1,0 +1,7 @@
+C:\Users\Użytkownik\source\repos\Employee-Records\Employee-Records\bin\Debug\Employee-Records.exe.config
+C:\Users\Użytkownik\source\repos\Employee-Records\Employee-Records\bin\Debug\Employee-Records.exe
+C:\Users\Użytkownik\source\repos\Employee-Records\Employee-Records\bin\Debug\Employee-Records.pdb
+C:\Users\Użytkownik\source\repos\Employee-Records\Employee-Records\obj\Debug\Employee-Records.csprojAssemblyReference.cache
+C:\Users\Użytkownik\source\repos\Employee-Records\Employee-Records\obj\Debug\Employee-Records.csproj.CoreCompileInputs.cache
+C:\Users\Użytkownik\source\repos\Employee-Records\Employee-Records\obj\Debug\Employee-Records.exe
+C:\Users\Użytkownik\source\repos\Employee-Records\Employee-Records\obj\Debug\Employee-Records.pdb
