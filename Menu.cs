@@ -27,7 +27,7 @@ namespace Employee_Records
                 Console.Clear();
                 Console.CursorVisible = false;
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.SetCursorPosition(20, 1);
+                Console.SetCursorPosition(25, 1);
                 Console.Write(">>> Employee Records <<<");
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.SetCursorPosition(col, row++);
